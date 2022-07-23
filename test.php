@@ -1,14 +1,15 @@
 <?php
+    session_start();
     include('inc/header.php'); 
     //include('addindb.php')
-    session_start();
+
 
     $VVV = $_SESSION["useruid"];
-    echo $VVV;
+    //echo $VVV;
     if (isset($_SESSION["useruid"])){
-        echo $_SESSION["useruid"];
+        //echo $_SESSION["useruid"];
     }else{
-        echo 'Not Logged in';
+        //echo 'Not Logged in';
     }
 ?>
 

@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     include('inc/header.php'); 
 
 ?>
@@ -7,7 +8,7 @@
 
 <div class="container">
     <?php
-        session_start();
+        
         if (isset($_SESSION["useruid"])){
             echo '<h1 class="page-header text-center">Hi '.$_SESSION["useruid"].'</h1>';;
         }else{
@@ -31,7 +32,7 @@
 
     </form>
 
-    <td> <form action="logoutcode.php" method="POST">
+    <td> <form action="logoutCode.php" method="POST">
     <button type=submit class="btn btn-success btn-sm"  name="retPath" value=<?php echo basename(__FILE__);?>>Logout</button>
     </form> </td>
 

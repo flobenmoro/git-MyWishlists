@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 
 include 'inc/conn.php';
@@ -22,16 +22,16 @@ if (isset($_POST['submit'])){
     $checkPwd = password_verify($pwd, $hashedPwd);
 
     if ($checkPwd){
-        echo $testV['id'];
+        //echo $testV['id'];
         if (isset($_SESSION["useruid"])){
             
         }else{
-            session_start();
+            
             $_SESSION["useruid"] = $testV['uid'];
-            echo  '$_SESSION["useruid"]';
+            //echo  '$_SESSION["useruid"]';
         }
     }else{
-        echo 'input not found';
+        //echo 'input not found';
     }
 
 }else{
@@ -41,3 +41,5 @@ if (isset($_POST['submit'])){
 
 $returnPath = $_POST['retPath'];
 header('location:'.$returnPath);
+
+    exit();

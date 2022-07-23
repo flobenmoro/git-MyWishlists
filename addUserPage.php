@@ -10,7 +10,7 @@
 
     <h1 class="page-header text-center">Add User Page</h1>
     
-    <form method="POST" action="addusercode.php">
+    <form method="POST" action="addUserCode.php">
 
         <p>Username</p>
         <input type="text" name="username">

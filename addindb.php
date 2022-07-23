@@ -1,16 +1,18 @@
+<?php 
+    
+    include 'inc/conn.php'; 
 
-<?php include 'inc/conn.php'; ?>
-
-<?php
 
     $_NameV = $_POST['passedstr'];
 
+    
 
-
-    $sql = "INSERT INTO wishlisttable (Product) values ('$_NameV')";
+    $sql = "INSERT INTO `wishlisttable` (`id` , `Product` , `Quantity` , `Remarks`) values (NULL, '$_NameV' , '1', '')";
     $conn->query($sql);
-
+    
+    
+    
     header('location:test.php');
 
 
-
+    exit();
